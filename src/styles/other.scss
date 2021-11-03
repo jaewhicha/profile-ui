@@ -1,0 +1,85 @@
+/* ===================================================================
+ * # MISC 
+ *
+ * ------------------------------------------------------------------- */
+ .h-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* misc helper classes
+ */
+.is-hidden {
+    display: none;
+}
+
+.is-invisible {
+    visibility: hidden;
+}
+
+.h-screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+    position: absolute;
+}
+
+.h-antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.h-overflow-hidden {
+    overflow: hidden;
+}
+
+.h-remove-top {
+    margin-top: 0;
+}
+
+.h-remove-bottom {
+    margin-bottom: 0;
+}
+
+.h-add-half-bottom {
+    margin-bottom: var(--vspace-0_5) !important;
+}
+
+.h-add-bottom {
+    margin-bottom: var(--vspace-1) !important;
+}
+
+.h-no-border {
+    border: none;
+}
+
+.h-full-width {
+    width: 100%;
+}
+
+.h-text-center {
+    text-align: center;
+}
+
+.h-text-left {
+    text-align: left;
+}
+
+.h-text-right {
+    text-align: right;
+}
+
+.h-pull-left {
+    float: left;
+}
+
+.h-pull-right {
+    float: right;
+}

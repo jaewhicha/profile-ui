@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.scss';
+import '@fortawesome/fontawesome-free/js/all.min';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './scripts/plugins';
+import './scripts/main';
 
 ReactDOM.render(
   <React.StrictMode>
