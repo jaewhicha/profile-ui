@@ -4,8 +4,6 @@ import './index.scss';
 import '@fortawesome/fontawesome-free/js/all.min';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import './scripts/plugins';
-import './scripts/main';
 
 ReactDOM.render(
   <React.StrictMode>

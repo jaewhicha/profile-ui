@@ -1,24 +1,53 @@
 import React, { Component } from 'react';
+import Swiper from 'swiper';
 import './Testimonials.scss';
 
 export default class Testimonials extends Component {
+
+    componentDidMount() {
+        this.initializeSwiper();
+    }
+
+    initializeSwiper = () => {
+        // eslint-disable-next-line
+        const mySwiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },          
+            breakpoints: {
+                // when window width is >= 401px
+                401: {
+                    slidesPerView: 1,
+                    spaceBetween: 20
+                },
+                // when window width is >= 801px
+                801: {
+                    slidesPerView: 2,
+                    spaceBetween: 48
+                }
+            }
+         });
+    }
+
     render() {
         return (
-            <section id="testimonials" class="s-testimonials target-section">
-                <div class="s-testimonials__bg"></div>
-                <div class="row s-testimonials__header">
-                    <div class="column large-12">
+            <section id="testimonials" className="s-testimonials target-section">
+                <div className="s-testimonials__bg"></div>
+                <div className="row s-testimonials__header">
+                    <div className="column large-12">
                         <h3>Hear What My Clients Say</h3>
                     </div>
                 </div>
-                <div class="row s-testimonials__content">
-                    <div class="column">
-                        <div class="swiper-container testimonial-slider">
-                            <div class="swiper-wrapper">
-                                <div class="testimonial-slider__slide swiper-slide">
-                                    <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-02.jpg" alt="Author 1" class="testimonial-slider__avatar" />
-                                        <cite class="testimonial-slider__cite">
+                <div className="row s-testimonials__content">
+                    <div className="column">
+                        <div className="swiper-container testimonial-slider">
+                            <div className="swiper-wrapper">
+                                <div className="testimonial-slider__slide swiper-slide">
+                                    <div className="testimonial-slider__author">
+                                        <img src="images/avatars/user-02.jpg" alt="Author 1" className="testimonial-slider__avatar" />
+                                        <cite className="testimonial-slider__cite">
                                             <strong>Tim Cook</strong>
                                             <span>CEO, Apple</span>
                                         </cite>
@@ -29,10 +58,10 @@ export default class Testimonials extends Component {
                                         Laudantium quia consequatur molestias delectus culpa.
                                     </p>
                                 </div>
-                                <div class="testimonial-slider__slide swiper-slide">
-                                    <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-03.jpg" alt="Author 2" class="testimonial-slider__avatar" />
-                                        <cite class="testimonial-slider__cite">
+                                <div className="testimonial-slider__slide swiper-slide">
+                                    <div className="testimonial-slider__author">
+                                        <img src="images/avatars/user-03.jpg" alt="Author 2" className="testimonial-slider__avatar" />
+                                        <cite className="testimonial-slider__cite">
                                             <strong>Sundar Pichai</strong>
                                             <span>CEO, Google</span>
                                         </cite>
@@ -43,10 +72,10 @@ export default class Testimonials extends Component {
                                         Quasi voluptas eius distinctio. Atque eos maxime.
                                     </p>
                                 </div>
-                                <div class="testimonial-slider__slide swiper-slide">
-                                    <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-04.jpg" alt="Author 3" class="testimonial-slider__avatar" />
-                                        <cite class="testimonial-slider__cite">
+                                <div className="testimonial-slider__slide swiper-slide">
+                                    <div className="testimonial-slider__author">
+                                        <img src="images/avatars/user-04.jpg" alt="Author 3" className="testimonial-slider__avatar" />
+                                        <cite className="testimonial-slider__cite">
                                             <strong>Satya Nadella</strong>
                                             <span>CEO, Microsoft</span>
                                         </cite>
@@ -57,10 +86,10 @@ export default class Testimonials extends Component {
                                         Voluptatem dignissimos ut.
                                     </p>
                                 </div>
-                                <div class="testimonial-slider__slide swiper-slide">
-                                    <div class="testimonial-slider__author">
-                                        <img src="images/avatars/user-05.jpg" alt="Author 4" class="testimonial-slider__avatar" />
-                                        <cite class="testimonial-slider__cite">
+                                <div className="testimonial-slider__slide swiper-slide">
+                                    <div className="testimonial-slider__author">
+                                        <img src="images/avatars/user-05.jpg" alt="Author 4" className="testimonial-slider__avatar" />
+                                        <cite className="testimonial-slider__cite">
                                             <strong>Jeff Bezos</strong>
                                             <span>CEO, Amazon</span>
                                         </cite>
@@ -72,7 +101,7 @@ export default class Testimonials extends Component {
                                     </p>
                                 </div>
                             </div>
-                            <div class="swiper-pagination"></div>
+                            <div className="swiper-pagination"></div>
                         </div>
                     </div>
                 </div>

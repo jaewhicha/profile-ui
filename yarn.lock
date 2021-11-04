@@ -2771,6 +2771,11 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
+basiclightbox@^5.0.4:
+  version "5.0.4"
+  resolved "https://registry.yarnpkg.com/basiclightbox/-/basiclightbox-5.0.4.tgz#5367d6d468ae44406e51b8486cfb8751f36f1fb2"
+  integrity sha512-EsuNWmfcFXWZOe0txKXsllYOC7bDpoaVLc4HHHlYKB/roymlZs+FBdLUU6rx2yPpnJZhulwheKdPjqr2k0+NGQ==
+
 batch@0.6.1:
   version "0.6.1"
   resolved "https://registry.yarnpkg.com/batch/-/batch-0.6.1.tgz#dc34314f4e679318093fc760272525f94bf25c16"
@@ -4226,6 +4231,13 @@ dom-serializer@0:
   dependencies:
     domelementtype "^2.0.1"
     entities "^2.0.0"
+
+dom7@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-4.0.1.tgz#821209df1bfdf97dd82b5156e50f7cb66b3f166c"
+  integrity sha512-y/RWjw3gK3qQnZz6IqDaIoqH6+xBhcB3Wsh5HFwl0abwuO/NAgbSB31ZbxtBDcuDe8jAX5NYUNDLTx4Ul48sIw==
+  dependencies:
+    ssr-window "^4.0.0"
 
 domain-browser@^1.1.1:
   version "1.2.0"
@@ -7018,6 +7030,11 @@ jsprim@^1.2.2:
     array-includes "^3.1.2"
     object.assign "^4.1.2"
 
+jump.js@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/jump.js/-/jump.js-1.0.2.tgz#e0641b47f40a38f2139c25fda0500bf28e43015a"
+  integrity sha1-4GQbR/QKOPITnCX9oFAL8o5DAVo=
+
 killable@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/killable/-/killable-1.0.1.tgz#4c8ce441187a061c7474fb87ca08e2a638194892"
@@ -7271,6 +7288,11 @@ magic-string@^0.25.0, magic-string@^0.25.7:
   integrity sha512-4CrMT5DOHTDk4HYDlzmwu4FVCcIYI8gauveasrdCu2IKIFOJ3f0v/8MDGJCDL9oD2ppz/Av1b0Nj345H9M+XIA==
   dependencies:
     sourcemap-codec "^1.4.4"
+
+mailtoui@1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/mailtoui/-/mailtoui-1.0.3.tgz#198792b569d7cfcaa6ccb008cc2359ac89db7ee9"
+  integrity sha512-Rse/OFWqSMuc/7D/Pw+dnkWwWLIhSx9hsZMb+9RaIOYJcQgd8SNV5YtM5b5GdBIwM2Di59oRk1Wz929X9UeUeg==
 
 make-dir@^2.0.0:
   version "2.1.0"
@@ -9149,6 +9171,11 @@ pretty-format@^27.0.0, pretty-format@^27.0.2, pretty-format@^27.3.1:
     ansi-styles "^5.0.0"
     react-is "^17.0.1"
 
+prismjs@^1.25.0:
+  version "1.25.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.25.0.tgz#6f822df1bdad965734b310b315a23315cf999756"
+  integrity sha512-WCjJHl1KEWbnkQom1+SzftbtXMKQoezOCYs5rECqMN+jP+apI7ftoflyqigqzopSO3hMhTEb0mFClA8lkolgEg==
+
 process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
@@ -9719,6 +9746,11 @@ relateurl@^0.2.7:
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha1-VNvzd+UUQKypCkzSdGANP/LYiKk=
+
+rellax@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/rellax/-/rellax-1.12.1.tgz#1b433ef7ac4aa3573449a33efab391c112f6b34d"
+  integrity sha512-XBIi0CDpW5FLTujYjYBn1CIbK2CJL6TsAg/w409KghP2LucjjzBjsujXDAjyBLWgsfupfUcL5WzdnIPcGfK7XA==
 
 remove-trailing-separator@^1.0.1:
   version "1.1.0"
@@ -10523,6 +10555,11 @@ sshpk@^1.7.0:
     safer-buffer "^2.0.2"
     tweetnacl "~0.14.0"
 
+ssr-window@^4.0.0, ssr-window@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-4.0.1.tgz#514bf2ca81952f63fe88e8b0c623a23f90f7feb3"
+  integrity sha512-5q936lkCk5Lg5hM6tG8Nutdym4vNiuFSWorslTzOn71PWb3Wnx44q/k2Ryn1LWA1G4FtxMzjywUFOiOxPkVGrA==
+
 ssri@^6.0.1:
   version "6.0.1"
   resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
@@ -10873,6 +10910,14 @@ svgo@^1.0.0, svgo@^1.2.2:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+swiper@^7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-7.2.0.tgz#aae2bb7632798467abd5c1ab3e2441598a70dbd7"
+  integrity sha512-CUL6Nvzcf3fU0b8dHaraYphgBT7l44PY1B6T8b+E12pim4DEcwFZDy/KZoIKrAnn+rfbayCmcksYmSDIP5nDHg==
+  dependencies:
+    dom7 "^4.0.1"
+    ssr-window "^4.0.1"
 
 symbol-tree@^3.2.4:
   version "3.2.4"
