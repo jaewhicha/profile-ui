@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
+import MailToUI from '../../../node_modules/mailtoui/dist/mailtoui-min';
 import './Contact.scss';
 
 export default class Contact extends Component {
+    componentDidMount() {
+        MailToUI.run();
+    }
+
     render() {
         return (
             <section id="contact" className="s-contact target-section">
@@ -25,7 +30,7 @@ export default class Contact extends Component {
                                         Email
                                     </h5>
                                     <p className="contact-block__content">
-                                        <a className="mailtoui" href="mailto:sayhello@ceevee.com">sayhello@ceevee.com</a>
+                                        <a className="mailtoui" href="mailto:jay@jaywitcher.com">jay@jaywitcher.com</a>
                                     </p>
                                 </div>
                             </div>
@@ -35,12 +40,12 @@ export default class Contact extends Component {
                                         Phone
                                     </h5>
                                     <p className="contact-block__content">
-                                        <a href="tel:+1975432345">+197 543 2345</a>
+                                        <a href="tel:+14305582332">+1 (430) 558-2332</a>
                                     </p>
                                 </div>
                             </div>
                             <div className="column large-12">
-                                <a href="mailto:sayhello@ceevee.com" className="mailtoui btn btn--primary h-full-width">Let's Talk</a>
+                                <a href="mailto:jay@jaywitcher.com" className="mailtoui btn btn--primary h-full-width">Let's Talk</a>
                             </div>
                         </div>
                     </div>

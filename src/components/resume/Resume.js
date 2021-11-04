@@ -12,11 +12,11 @@ export default class Resume extends Component {
                     <div className="column large-9 tab-12">
                         <div className="resume-block">
                             <div className="resume-block__header">
-                                <h4 className="h3">Dropbox</h4>
+                                <h4 className="h3">Pariveda Solutions</h4>
                                 <p className="resume-block__header-meta">
-                                    <span>Product Designer</span> 
+                                    <span>Lead Software Engineer, Senior Associate</span> 
                                     <span className="resume-block__header-date">
-                                        August 2019 - Present
+                                        July 2017 - Present
                                     </span>
                                 </p>
                             </div>
@@ -30,11 +30,11 @@ export default class Resume extends Component {
                         </div>
                         <div className="resume-block">
                             <div className="resume-block__header">
-                                <h4 className="h3">Facebook</h4>
+                                <h4 className="h3">Perficient</h4>
                                 <p className="resume-block__header-meta">
-                                    <span>UI/UX Designer</span> 
+                                    <span>Software Engineer, Technical Consultant</span> 
                                     <span className="resume-block__header-date">
-                                        August 2016 - July 2019
+                                        May 2015 - July 2017
                                     </span>
                                 </p>
                             </div>
@@ -55,29 +55,11 @@ export default class Resume extends Component {
                     <div className="column large-9 tab-12">
                         <div className="resume-block">
                             <div className="resume-block__header">
-                                <h4 className="h3">University of Life</h4>
+                                <h4 className="h3">Louisiana State University A&M</h4>
                                 <p className="resume-block__header-meta">
-                                    <span>Master in Graphic Design</span> 
+                                    <span>Bachelor in Science, Information Systems</span> 
                                     <span className="resume-block__header-date">
-                                        April 2015
-                                    </span>
-                                </p>
-                            </div>
-                            <p>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore 
-                                vero quidem nobis maxime dolorem aliquam quisquam eum ipsum amet. Vitae 
-                                aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam 
-                                nesciunt facilis! Porro architecto dicta inventore tempora ratione quia odio.
-                            </p>
-
-                        </div>
-                        <div className="resume-block">
-                            <div className="resume-block__header">
-                                <h4 className="h3">School of Cool Designers</h4>
-                                <p className="resume-block__header-meta">
-                                    <span>B.A. Degree in Graphic Design</span> 
-                                    <span className="resume-block__header-date">
-                                        August 2012
+                                        May 2015
                                     </span>
                                 </p>
                             </div>

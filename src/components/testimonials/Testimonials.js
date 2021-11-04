@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
-import Swiper from 'swiper';
+import Swiper, {Pagination} from 'swiper';
+import 'swiper/swiper.scss';
+import 'swiper/modules/pagination/pagination.scss'
 import './Testimonials.scss';
+
+import Peer1 from '../../assets/images/avatars/peer-01.jpeg';
 
 export default class Testimonials extends Component {
 
@@ -9,6 +13,7 @@ export default class Testimonials extends Component {
     }
 
     initializeSwiper = () => {
+        Swiper.use([Pagination]);
         // eslint-disable-next-line
         const mySwiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
@@ -20,12 +25,12 @@ export default class Testimonials extends Component {
                 // when window width is >= 401px
                 401: {
                     slidesPerView: 1,
-                    spaceBetween: 20
+                    spaceBetween: 0
                 },
                 // when window width is >= 801px
                 801: {
-                    slidesPerView: 2,
-                    spaceBetween: 48
+                    slidesPerView: 1,
+                    spaceBetween: 0
                 }
             }
          });
@@ -37,67 +42,26 @@ export default class Testimonials extends Component {
                 <div className="s-testimonials__bg"></div>
                 <div className="row s-testimonials__header">
                     <div className="column large-12">
-                        <h3>Hear What My Clients Say</h3>
+                        <h3>What My Peers Have to Say</h3>
                     </div>
                 </div>
                 <div className="row s-testimonials__content">
                     <div className="column">
                         <div className="swiper-container testimonial-slider">
-                            <div className="swiper-wrapper">
+                            <div className="swiper-wrapper center">
                                 <div className="testimonial-slider__slide swiper-slide">
                                     <div className="testimonial-slider__author">
-                                        <img src="images/avatars/user-02.jpg" alt="Author 1" className="testimonial-slider__avatar" />
+                                        <img src={Peer1} alt="Roy Condrey" className="testimonial-slider__avatar" />
                                         <cite className="testimonial-slider__cite">
-                                            <strong>Tim Cook</strong>
-                                            <span>CEO, Apple</span>
+                                            <strong>Roy Condrey</strong>
+                                            <span>Project Manager, Perficient</span>
                                         </cite>
                                     </div>
                                     <p>
-                                        Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. 
-                                        Explicabo a quaerat sint autem dolore ducimus ut consequatur neque.  Nisi dolores quaerat fuga rem nihil nostrum.
-                                        Laudantium quia consequatur molestias delectus culpa.
-                                    </p>
-                                </div>
-                                <div className="testimonial-slider__slide swiper-slide">
-                                    <div className="testimonial-slider__author">
-                                        <img src="images/avatars/user-03.jpg" alt="Author 2" className="testimonial-slider__avatar" />
-                                        <cite className="testimonial-slider__cite">
-                                            <strong>Sundar Pichai</strong>
-                                            <span>CEO, Google</span>
-                                        </cite>
-                                    </div>
-                                    <p>
-                                        Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                                        Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
-                                        Quasi voluptas eius distinctio. Atque eos maxime.
-                                    </p>
-                                </div>
-                                <div className="testimonial-slider__slide swiper-slide">
-                                    <div className="testimonial-slider__author">
-                                        <img src="images/avatars/user-04.jpg" alt="Author 3" className="testimonial-slider__avatar" />
-                                        <cite className="testimonial-slider__cite">
-                                            <strong>Satya Nadella</strong>
-                                            <span>CEO, Microsoft</span>
-                                        </cite>
-                                    </div>
-                                    <p>
-                                        Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
-                                        Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
-                                        Voluptatem dignissimos ut.
-                                    </p>
-                                </div>
-                                <div className="testimonial-slider__slide swiper-slide">
-                                    <div className="testimonial-slider__author">
-                                        <img src="images/avatars/user-05.jpg" alt="Author 4" className="testimonial-slider__avatar" />
-                                        <cite className="testimonial-slider__cite">
-                                            <strong>Jeff Bezos</strong>
-                                            <span>CEO, Amazon</span>
-                                        </cite>
-                                    </div>
-                                    <p>
-                                        Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis 
-                                        quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit. 
-                                        Nihil ea quia nesciunt. Ducimus aut sed ipsam.
+                                    Jay has been a true asset to the Scrum development team. He is always willing to do whatever is needed in 
+                                    order to deliver on the tasks that he is working on. Jay is diligent about learning new technologies as 
+                                    needed and is more than willing to teach others what he has learned. I highly recommend Jay Witcher to 
+                                    anyone and everyone that is looking for a hard worker that is willing step out of his comfort zone.
                                     </p>
                                 </div>
                             </div>

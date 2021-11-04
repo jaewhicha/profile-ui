@@ -1,6 +1,6 @@
 /* eslint-disable react/style-prop-object */
 import React, { Component } from 'react';
-import '../../assets/images/avatars/user-06.jpg'
+import MeImage from '../../assets/images/avatars/me-01.jpg'
 import './About.scss';
 
 export default class About extends Component {
@@ -9,32 +9,27 @@ export default class About extends Component {
             <section id="about" className="s-about target-section">
                 <div className="row">
                     <div className="column large-3 tab-12">
-                        <img className="s-about__pic" src="images/avatars/user-06.jpg" alt="" />
+                        <img className="s-about__pic" src={MeImage} alt="" />
                     </div>
                     <div className="column large-9 tab-12 s-about__content">
                         <h3>About Me</h3>
                         <p>
-                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
-                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa 
-                            quae ab illo inventore veritatis et quasi architecto beatae vitae 
-                            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit 
-                            aspernatur aut odit aut fugit, sed quia consequuntur magni dolores 
-                            eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, 
-                            qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-                            sed quia non numquam eius modi tempora incidunt ut labore et dolore 
-                            magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis 
-                            nostrum exercitationem ullam corporis suscipit laboriosam.
+                            Welcome! I'm a software engineer with over six years of professional work experience leading teams in developing digital products for clients.
+                            My current work involves performance optimizations of a pricing backend for a large energy company based out of Houston, TX.  I've worked
+                            with both large <em>Fortune</em> Global 500 companies and companies with under 300 employees.  But size doesn't matter, what matters are
+                            the problems to be solved and how technology can be leveraged to create solutions.  I have the knowledge and innovator spirit to break down
+                            problems into beutifully designed and elegant solutions.<br /><br />
+                            <em>Industry Experience: Energy, Automotive, Healthcare, Financial</em> 
                         </p>
                         <hr />
                         <div className="row s-about__content-bottom">
                             <div className="column w-1000-stack">
                                 <h3>Contact Details</h3>
                                     <p>
-                                    Jonathan Doe <br />
-                                    1600 Amphitheatre Parkway <br />
-                                    Mountain View, CA 94043 US <br />
-                                    <a href="tel:+1975432345">+197 543 2345</a> <br />
-                                    <a href="mailto:#0">sayhello@ceevee.com</a>
+                                    Jay Witcher <br />
+                                    Frisco, Texas, USA <br />
+                                    <a href="tel:+1975432345">+1 (430) 558-2332</a> <br />
+                                    <a href="mailto:jay@jaywitcher.com">jay@jaywitcher.com</a>
                                 </p>
                             </div>
                             <div className="column w-1000-stack">

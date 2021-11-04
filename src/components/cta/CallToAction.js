@@ -8,18 +8,18 @@ export default class CallToAction extends Component {
                 <div className="row">
                     <div className="column">
                         <h3 className="h2 section-desc">
-                            Need a great reliable web hosting?
+                            Looking for a good recipe for that special meal?
                         </h3>
                     </div>
                 </div>
                 <div className="row cta-content">
                     <div className="column">
                         <p>
-                            We highly recommend <a href="https://www.dreamhost.com/r.cgi?287326">DreamHost</a>.
-                            Powerful web and Wordpress hosting. Guaranteed.
-                            Starting at $2.95 per month.
+                            Check out our recipes at <a href="https://deviandjay.com/recipes">deviandjay.com</a>.<br/>
+                            <em>(Expected launch date spring 2022)</em><br/>
+                            New dishes will be added monthly. Subscribe to get the newest creations in your inbox!
                         </p>
-                        <a href="https://www.dreamhost.com/r.cgi?287326" className="btn btn--primary h-full-width">Get Started</a>
+                        <a href="https://deviandjay.com/recipes" className="btn btn--primary h-full-width">Bon Appétit</a>
                     </div>
                 </div>
             </section>

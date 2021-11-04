@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 import * as basicLightbox from 'basiclightbox';
 import './Portfolio.scss';
 
+import droplet from '../../assets/images/portfolio/droplet.jpg';
+import droplet2x from '../../assets/images/portfolio/droplet@2x.jpg'
+import dropletBig from '../../assets/images/portfolio/gallery/g-droplet.jpg'
+import lamp from '../../assets/images/portfolio/lamp.jpg';
+import lamp2x from '../../assets/images/portfolio/lamp@2x.jpg';
+import lampBig from '../../assets/images/portfolio/gallery/g-lamp.jpg'
+import minimalismo from '../../assets/images/portfolio/minimalismo.jpg';
+import minimalismo2x from '../../assets/images/portfolio/minimalismo@2x.jpg';
+import minimalismoBig from '../../assets/images/portfolio/gallery/g-minimalismo.jpg'
+import shutterbug from '../../assets/images/portfolio/shutterbug.jpg';
+import shutterbug2x from '../../assets/images/portfolio/shutterbug@2x.jpg';
+import shutterbugBig from '../../assets/images/portfolio/gallery/g-shutterbug.jpg'
+
 export default class Portfolio extends Component {
     
     componentDidMount() {
@@ -50,64 +63,28 @@ export default class Portfolio extends Component {
                 <div className="row collapse block-large-1-4 block-medium-1-3 block-tab-1-2 block-500-stack folio-list">
                     <div className="column folio-item">
                         <a href="#modal-01" className="folio-item__thumb">
-                            <img src="images/portfolio/droplet.jpg" 
-                                srcSet="images/portfolio/droplet.jpg 1x, 
-                                        images/portfolio/droplet@2x.jpg 2x" alt="" />
+                            <img src={droplet} srcSet={`${droplet} 1x, ${droplet2x} 2x`} alt="" />
                         </a>
                     </div>
                     <div className="column folio-item">
                         <a href="#modal-02" className="folio-item__thumb">
-                            <img src="images/portfolio/lamp.jpg" 
-                                srcSet="images/portfolio/lamp.jpg 1x, 
-                                        images/portfolio/lamp@2x.jpg 2x" alt="" />
+                            <img src={lamp} srcSet={`${lamp} 1x, ${lamp2x} 2x`} alt="" />
                         </a>
                     </div>
                     <div className="column folio-item">
                         <a href="#modal-03" className="folio-item__thumb">
-                            <img src="images/portfolio/minimalismo.jpg" 
-                                srcSet="images/portfolio/minimalismo.jpg 1x, 
-                                        images/portfolio/minimalismo@2x.jpg 2x" alt="" />
+                            <img src={minimalismo} srcSet={`${minimalismo} 1x, ${minimalismo2x} 2x`} alt="" />
                         </a>
                     </div>
                     <div className="column folio-item">
                         <a href="#modal-04" className="folio-item__thumb">
-                            <img src="images/portfolio/shutterbug.jpg" 
-                                srcSet="images/portfolio/shutterbug.jpg 1x, 
-                                        images/portfolio/shutterbug@2x.jpg 2x" alt="" />
-                        </a>
-                    </div>
-                    <div className="column folio-item">
-                        <a href="#modal-05" className="folio-item__thumb">
-                            <img src="images/portfolio/fuji.jpg" 
-                                srcSet="images/portfolio/fuji.jpg 1x, 
-                                        images/portfolio/fuji@2x.jpg 2x" alt="" />
-                        </a>
-                    </div>
-                    <div className="column folio-item">
-                        <a href="#modal-06" className="folio-item__thumb">
-                            <img src="images/portfolio/skaterboy.jpg" 
-                                srcSet="images/portfolio/skaterboy.jpg 1x, 
-                                        images/portfolio/skaterboy@2x.jpg 2x" alt="" />
-                        </a>
-                    </div>
-                    <div className="column folio-item">
-                        <a href="#modal-07" className="folio-item__thumb">
-                            <img src="images/portfolio/rucksack.jpg" 
-                                srcSet="images/portfolio/rucksack.jpg 1x, 
-                                        images/portfolio/rucksack@2x.jpg 2x" alt="" />
-                        </a>
-                    </div>
-                    <div className="column folio-item">
-                        <a href="#modal-08" className="folio-item__thumb">
-                            <img src="images/portfolio/sanddunes.jpg" 
-                                srcSet="images/portfolio/sanddunes.jpg 1x, 
-                                        images/portfolio/sanddunes@2x.jpg 2x" alt="" />
+                        <img src={shutterbug} srcSet={`${shutterbug} 1x, ${shutterbug2x} 2x`} alt="" />
                         </a>
                     </div>
                 </div>
                 <div id="modal-01" hidden>
                     <div className="modal-popup">
-                        <img src="images/portfolio/gallery/g-droplet.jpg" alt="" />
+                        <img src={dropletBig} alt="" />
             
                         <div className="modal-popup__desc">
                             <h5>Droplet</h5>
@@ -123,7 +100,7 @@ export default class Portfolio extends Component {
                 </div>
                 <div id="modal-02" hidden>
                     <div className="modal-popup">
-                        <img src="images/portfolio/gallery/g-lamp.jpg" alt="" />
+                        <img src={lampBig} alt="" />
             
                         <div className="modal-popup__desc">
                             <h5>The Lamp</h5>
@@ -138,7 +115,7 @@ export default class Portfolio extends Component {
                 </div>
                 <div id="modal-03" hidden>
                     <div className="modal-popup">
-                        <img src="images/portfolio/gallery/g-minimalismo.jpg" alt="" />
+                        <img src={minimalismoBig} alt="" />
             
                         <div className="modal-popup__desc">
                             <h5>Minimalismo</h5>
@@ -153,7 +130,7 @@ export default class Portfolio extends Component {
                 </div>
                 <div id="modal-04" hidden>
                     <div className="modal-popup">
-                        <img src="images/portfolio/gallery/g-shutterbug.jpg" alt="" />
+                        <img src={shutterbugBig} alt="" />
             
                         <div className="modal-popup__desc">
                             <h5>Shutterbug</h5>
@@ -163,60 +140,6 @@ export default class Portfolio extends Component {
                             </ul>
                         </div>
             
-                        <a href="https://www.behance.net/" className="modal-popup__details">Project link</a>
-                    </div>
-                </div>
-                <div id="modal-05" hidden>
-                    <div className="modal-popup">
-                        <img src="images/portfolio/gallery/g-fuji.jpg" alt="" />
-                        <div className="modal-popup__desc">
-                            <h5>Fuji</h5>
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                            <ul className="modal-popup__cat">
-                                <li>Product Design</li>
-                            </ul>
-                        </div>
-                        <a href="https://www.behance.net/" className="modal-popup__details">Project link</a>
-                    </div>
-                </div>
-                <div id="modal-06" hidden>
-                    <div className="modal-popup">
-                        <img src="images/portfolio/gallery/g-skaterboy.jpg" alt="" />
-                        <div className="modal-popup__desc">
-                            <h5>Skaterboy</h5>
-                            <p>Quisquam vel libero consequuntur autem voluptas. Qui aut vero. Omnis fugit mollitia cupiditate voluptas. Aenean sollicitudin, lorem quis bibendum auctor.</p>
-                            <ul className="modal-popup__cat">
-                                <li>Branding</li>
-                                <li>Product Design</li>
-                            </ul>
-                        </div>
-                        <a href="https://www.behance.net/" className="modal-popup__details">Project link</a>
-                    </div>
-                </div>
-                <div id="modal-07" hidden>
-                    <div className="modal-popup">
-                        <img src="images/portfolio/gallery/g-rucksack.jpg" alt="" />
-                        <div className="modal-popup__desc">
-                            <h5>Rucksack</h5>
-                            <p>Odio soluta enim quos sit asperiores rerum rerum repudiandae cum. Vel voluptatem alias qui assumenda iure et expedita voluptatem. Ratione officiis quae.</p>
-                            <ul className="modal-popup__cat">
-                                <li>Branding</li>
-                                <li>Product Design</li>
-                            </ul>
-                        </div>
-                        <a href="https://www.behance.net/" className="modal-popup__details">Project link</a>
-                    </div>
-                </div>
-                <div id="modal-08" hidden>
-                    <div className="modal-popup">
-                        <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="" />
-                        <div className="modal-popup__desc">
-                            <h5>Sand Dunes</h5>
-                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                            <ul className="modal-popup__cat">
-                                <li>Web Design</li>
-                            </ul>
-                        </div>
                         <a href="https://www.behance.net/" className="modal-popup__details">Project link</a>
                     </div>
                 </div>

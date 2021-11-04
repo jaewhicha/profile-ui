@@ -28,7 +28,7 @@ export default class Hero extends Component {
                         <div className="s-hero__content-about">
                             <h1>I'm Jay Witcher.</h1>
                             <h3>
-                            I'm a Texas based <span>full-stack engineer</span>, <span>innovator</span>, and <span>leader</span> creating awesome and
+                            I'm a USA based <span>full-stack engineer</span>, <span>innovator</span>, and <span>leader</span> creating awesome and
                             effective product experiences for the world to use. <br />Let's <a className="smoothscroll" href="#about">start scrolling</a> 
                             &nbsp;and learn more <a className="smoothscroll" href="#about">about me</a>.
                             </h3>
@@ -45,7 +45,7 @@ export default class Hero extends Component {
                                     <span className="sr-only">My DEV</span>
                                     <i className="fab fa-dev" aria-hidden="true"></i>
                                 </a>
-                                <a title="Medium" href="https://medium.com/@jaewhicha">
+                                <a title="Medium" href="https://medium.com/@jaewhicha/about">
                                     <span className="sr-only">My Medium</span>
                                     <i className="fab fa-medium" aria-hidden="true"></i>
                                 </a>
