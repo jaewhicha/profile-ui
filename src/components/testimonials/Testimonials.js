@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Swiper, {Pagination} from 'swiper';
 import 'swiper/swiper.scss';
-import 'swiper/modules/pagination/pagination.scss'
 import './Testimonials.scss';
 
 import Peer1 from '../../assets/images/avatars/peer-01.jpeg';

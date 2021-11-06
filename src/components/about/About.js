@@ -24,13 +24,9 @@ export default class About extends Component {
                         <hr />
                         <div className="row s-about__content-bottom">
                             <div className="column w-1000-stack">
-                                <h3>Contact Details</h3>
-                                    <p>
-                                    Jay Witcher <br />
-                                    Frisco, Texas, USA <br />
-                                    <a href="tel:+1975432345">+1 (430) 558-2332</a> <br />
-                                    <a href="mailto:jay@jaywitcher.com">jay@jaywitcher.com</a>
-                                </p>
+                            <a href="#0" className="btn btn--primary">
+                                    Contact Me
+                                </a>
                             </div>
                             <div className="column w-1000-stack">
                                 <a href="#0" className="btn btn--download">

@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
-import MailToUI from '../../../node_modules/mailtoui/dist/mailtoui-min';
 import './Contact.scss';
 
 export default class Contact extends Component {
-    componentDidMount() {
-        MailToUI.run();
-    }
 
     render() {
         return (

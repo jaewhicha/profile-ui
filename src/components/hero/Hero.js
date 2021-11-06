@@ -3,14 +3,11 @@ import Rellax from 'rellax';
 import './Hero.scss';
 
 export default class Hero extends Component {
-    constructor() {
-        super();
+
+    componentDidMount() {
         this.setState({
             rellax : null
         })
-    }
-
-    componentDidMount() {
         // eslint-disable-next-line
         this.rellax = new Rellax('.rellax');
     }
