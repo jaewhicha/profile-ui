@@ -1,14 +1,15 @@
-import React, { Component } from 'react'
+import React, { useEffect } from 'react'
 import './Header.scss'
 
-export default class Header extends Component {
-    componentDidMount() {
-        this.initializeMobileHeader()
-        this.initializeMoveHeader()
-        this.setScrollSpy()
-    }
+export function Header() {
 
-    initializeMoveHeader = () => {
+    useEffect(() => {
+        initializeMobileHeader()
+        initializeMoveHeader()
+        setScrollSpy()
+    })
+
+    const initializeMoveHeader = () => {
         const hdr = document.querySelector('.s-header')
         const hero = document.querySelector('#hero')
         let triggerHeight
@@ -41,7 +42,7 @@ export default class Header extends Component {
         })
     }
 
-    initializeMobileHeader = () => {
+    const initializeMobileHeader = () => {
         const toggleButton = document.querySelector('.s-header__menu-toggle')
         const headerNavWrap = document.querySelector('.s-header__nav-wrap')
         const siteBody = document.querySelector("body")
@@ -75,7 +76,7 @@ export default class Header extends Component {
         })
     }
 
-    setScrollSpy = () => {
+    const setScrollSpy = () => {
         const sections = document.querySelectorAll(".target-section")
 
         // Add an event listener listening for scroll
@@ -107,26 +108,24 @@ export default class Header extends Component {
             })
         }
     }
-
-    render() {
-        return (
-            <header className="s-header">
-                <div className="row s-header__nav-wrap">
-                    <nav className="s-header__nav">
-                        <ul>
-                            <li className="current"><a className="smoothscroll" href="#hero">Home</a></li>
-                            <li><a className="smoothscroll" href="#about">About</a></li>
-                            <li><a className="smoothscroll" href="#resume">Resume</a></li>
-                            <li><a className="smoothscroll" href="#portfolio">Works</a></li>
-                            <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
-                            <li><a className="smoothscroll" href="#contact">Say Hello</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <a className="s-header__menu-toggle" href="#0" title="Menu">
-                    <span className="s-header__menu-icon"></span>
-                </a>
-            </header>
-        )
-    }
+    
+    return (
+        <header className="s-header">
+            <div className="row s-header__nav-wrap">
+                <nav className="s-header__nav">
+                    <ul>
+                        <li className="current"><a className="smoothscroll" href="#hero">Home</a></li>
+                        <li><a className="smoothscroll" href="#about">About</a></li>
+                        <li><a className="smoothscroll" href="#resume">Resume</a></li>
+                        <li><a className="smoothscroll" href="#portfolio">Works</a></li>
+                        <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
+                        <li><a className="smoothscroll" href="#contact">Say Hello</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <a className="s-header__menu-toggle" href="#0" title="Menu">
+                <span className="s-header__menu-icon"></span>
+            </a>
+        </header>
+    )
 }
