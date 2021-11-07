@@ -1,63 +1,63 @@
-import React, { Component } from 'react';
-import Jump from 'jump.js';
-import './Footer.scss';
+import React, { Component } from 'react'
+import Jump from 'jump.js'
+import './Footer.scss'
 
 export default class Footer extends Component {
     componentDidMount() {
-        this.updatePreloader();
-        this.initializeAlertBoxes();
+        this.updatePreloader()
+        this.initializeAlertBoxes()
     }
 
     updatePreloader = () => {
-        const preloader = document.querySelector('#preloader');
-        if (!preloader) return;
+        const preloader = document.querySelector('#preloader')
+        if (!preloader) return
 
         window.addEventListener('load', function() {
             
-            document.querySelector('body').classList.remove('ss-preload');
-            document.querySelector('body').classList.add('ss-loaded');
+            document.querySelector('body').classList.remove('ss-preload')
+            document.querySelector('body').classList.add('ss-loaded')
 
             preloader.addEventListener('transitionend', function(e) {
                 if (e.target.matches("#preloader")) {
-                    this.style.display = 'none';
+                    this.style.display = 'none'
                 }
-            });
+            })
 
-        });
+        })
 
         // force page scroll position to top at page refresh
         // window.addEventListener('beforeunload' , function () {
-        //     window.scrollTo(0, 0);
-        // });
+        //     window.scrollTo(0, 0)
+        // })
     }
 
     initializeAlertBoxes = () => {
-        const boxes = document.querySelectorAll('.alert-box');
+        const boxes = document.querySelectorAll('.alert-box')
   
         boxes.forEach(function(box) {
 
             box.addEventListener('click', function(e){
                 if (e.target.matches(".alert-box__close")) {
-                    e.stopPropagation();
-                    e.target.parentElement.classList.add("hideit");
+                    e.stopPropagation()
+                    e.target.parentElement.classList.add("hideit")
 
                     setTimeout(function() {
-                        box.style.display = "none";
+                        box.style.display = "none"
                     }, 500)
                 }    
-            });
+            })
 
         })
     }
 
     initializeBackToTop = () => {
-        const pxShow = 900;
-        const goTopButton = document.querySelector(".ss-go-top");
+        const pxShow = 900
+        const goTopButton = document.querySelector(".ss-go-top")
 
-        if (!goTopButton) return;
+        if (!goTopButton) return
 
         // Show or hide the button
-        if (window.scrollY >= pxShow) goTopButton.classList.add("link-is-visible");
+        if (window.scrollY >= pxShow) goTopButton.classList.add("link-is-visible")
 
         window.addEventListener('scroll', function() {
             if (window.scrollY >= pxShow) {
@@ -65,21 +65,21 @@ export default class Footer extends Component {
             } else {
                 goTopButton.classList.remove("link-is-visible")
             }
-        });
+        })
     }
 
     initializeSmoothScroll = () => {
-        const triggers = document.querySelectorAll(".smoothscroll");
+        const triggers = document.querySelectorAll(".smoothscroll")
 
         triggers.forEach(function(trigger) {
             trigger.addEventListener("click", function() {
-                const target = trigger.getAttribute("href");
+                const target = trigger.getAttribute("href")
 
                 Jump(target, {
                     duration: 1200,
-                });
-            });
-        });
+                })
+            })
+        })
     }
 
     render() {

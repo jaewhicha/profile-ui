@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import Rellax from 'rellax';
-import './Hero.scss';
+import React, { Component } from 'react'
+import Rellax from 'rellax'
+import './Hero.scss'
 
 export default class Hero extends Component {
 
@@ -9,11 +9,11 @@ export default class Hero extends Component {
             rellax : null
         })
         // eslint-disable-next-line
-        this.rellax = new Rellax('.rellax');
+        this.rellax = new Rellax('.rellax')
     }
 
     componentWillUnmount() {
-        this.rellax.destroy();
+        this.rellax.destroy()
     }
 
     render() {
@@ -27,7 +27,7 @@ export default class Hero extends Component {
                             <h3>
                             I'm a USA based <span>full-stack engineer</span>, <span>innovator</span>, and <span>leader</span> creating awesome and
                             effective product experiences for the world to use. <br />Let's <a className="smoothscroll" href="#about">start scrolling</a> 
-                            &nbsp;and learn more <a className="smoothscroll" href="#about">about me</a>.
+                            &nbspand learn more <a className="smoothscroll" href="#about">about me</a>.
                             </h3>
                             <div className="s-hero__content-social">
                                 <a title="LinkedIn" href="https://www.linkedin.com/in/jay-witcher/">
@@ -62,7 +62,7 @@ export default class Hero extends Component {
                 <div className="s-hero__scroll">
                     <a href="#about" className="s-hero__scroll-link smoothscroll">
                         <span className="scroll-arrow">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style={{fill:'rgba(0, 0, 0, 1)',transform:';-ms-filter:'}}><path d="M18.707 12.707L17.293 11.293 13 15.586 13 6 11 6 11 15.586 6.707 11.293 5.293 12.707 12 19.414z"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style={{fill:'rgba(0, 0, 0, 1)',transform:'-ms-filter:'}}><path d="M18.707 12.707L17.293 11.293 13 15.586 13 6 11 6 11 15.586 6.707 11.293 5.293 12.707 12 19.414z"></path></svg>
                         </span>
                         <span className="scroll-text">Scroll Down</span>
                     </a>

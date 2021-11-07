@@ -1,55 +1,55 @@
-import React, { Component } from 'react';
-import * as basicLightbox from 'basiclightbox';
-import './Portfolio.scss';
+import React, { Component } from 'react'
+import * as basicLightbox from 'basiclightbox'
+import './Portfolio.scss'
 
-import droplet from '../../assets/images/portfolio/droplet.jpg';
+import droplet from '../../assets/images/portfolio/droplet.jpg'
 import droplet2x from '../../assets/images/portfolio/droplet@2x.jpg'
 import dropletBig from '../../assets/images/portfolio/gallery/g-droplet.jpg'
-import lamp from '../../assets/images/portfolio/lamp.jpg';
-import lamp2x from '../../assets/images/portfolio/lamp@2x.jpg';
+import lamp from '../../assets/images/portfolio/lamp.jpg'
+import lamp2x from '../../assets/images/portfolio/lamp@2x.jpg'
 import lampBig from '../../assets/images/portfolio/gallery/g-lamp.jpg'
-import minimalismo from '../../assets/images/portfolio/minimalismo.jpg';
-import minimalismo2x from '../../assets/images/portfolio/minimalismo@2x.jpg';
+import minimalismo from '../../assets/images/portfolio/minimalismo.jpg'
+import minimalismo2x from '../../assets/images/portfolio/minimalismo@2x.jpg'
 import minimalismoBig from '../../assets/images/portfolio/gallery/g-minimalismo.jpg'
-import shutterbug from '../../assets/images/portfolio/shutterbug.jpg';
-import shutterbug2x from '../../assets/images/portfolio/shutterbug@2x.jpg';
+import shutterbug from '../../assets/images/portfolio/shutterbug.jpg'
+import shutterbug2x from '../../assets/images/portfolio/shutterbug@2x.jpg'
 import shutterbugBig from '../../assets/images/portfolio/gallery/g-shutterbug.jpg'
 
 export default class Portfolio extends Component {
     
     componentDidMount() {
-        this.initializeLightBox();
+        this.initializeLightBox()
     }
 
     initializeLightBox() {
-        const folioLinks = document.querySelectorAll('.folio-item a');
-        const modals = [];
+        const folioLinks = document.querySelectorAll('.folio-item a')
+        const modals = []
 
         folioLinks.forEach(function(link) {
-            let modalbox = link.getAttribute('href');
+            let modalbox = link.getAttribute('href')
             let instance = basicLightbox.create(
                 document.querySelector(modalbox),
                 {
                     onShow: function(instance) {
                         //detect Escape key press
                         document.addEventListener("keydown", function(evt) {
-                            evt = evt || window.event;
+                            evt = evt || window.event
                             if(evt.keyCode === 27){
-                            instance.close();
+                            instance.close()
                             }
-                        });
+                        })
                     }
                 }
             )
-            modals.push(instance);
-        });
+            modals.push(instance)
+        })
 
         folioLinks.forEach(function(link, index) {
             link.addEventListener("click", function(e) {
-                e.preventDefault();
-                modals[index].show();
-            });
-        });
+                e.preventDefault()
+                modals[index].show()
+            })
+        })
     }
 
     render() {

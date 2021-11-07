@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
-import Swiper, {Pagination} from 'swiper';
-import 'swiper/swiper.scss';
-import './Testimonials.scss';
+import React, { Component } from 'react'
+import Swiper, {Pagination} from 'swiper'
+import 'swiper/swiper.scss'
+import './Testimonials.scss'
 
-import Peer1 from '../../assets/images/avatars/peer-01.jpeg';
+import Peer1 from '../../assets/images/avatars/peer-01.jpeg'
 
 export default class Testimonials extends Component {
 
     componentDidMount() {
-        this.initializeSwiper();
+        this.initializeSwiper()
     }
 
     initializeSwiper = () => {
-        Swiper.use([Pagination]);
+        Swiper.use([Pagination])
         // eslint-disable-next-line
         const mySwiper = new Swiper('.swiper-container', {
             slidesPerView: 1,
@@ -32,7 +32,7 @@ export default class Testimonials extends Component {
                     spaceBetween: 0
                 }
             }
-         });
+         })
     }
 
     render() {

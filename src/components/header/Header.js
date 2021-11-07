@@ -1,97 +1,97 @@
-import React, { Component } from 'react';
-import './Header.scss';
+import React, { Component } from 'react'
+import './Header.scss'
 
 export default class Header extends Component {
     componentDidMount() {
-        this.initializeMobileHeader();
-        this.initializeMoveHeader();
-        this.setScrollSpy();
+        this.initializeMobileHeader()
+        this.initializeMoveHeader()
+        this.setScrollSpy()
     }
 
     initializeMoveHeader = () => {
-        const hdr = document.querySelector('.s-header');
-        const hero = document.querySelector('#hero');
-        let triggerHeight;
+        const hdr = document.querySelector('.s-header')
+        const hero = document.querySelector('#hero')
+        let triggerHeight
 
-        if (!(hdr && hero)) return;
+        if (!(hdr && hero)) return
 
         setTimeout(function(){
-            triggerHeight = hero.offsetHeight - 170;
-        }, 300);
+            triggerHeight = hero.offsetHeight - 170
+        }, 300)
         
         window.addEventListener('scroll', function () {
-            let loc = window.scrollY;
+            let loc = window.scrollY
             if (loc > triggerHeight) {
-                hdr.classList.add('sticky');
+                hdr.classList.add('sticky')
             } else {
-                hdr.classList.remove('sticky');
+                hdr.classList.remove('sticky')
             }
 
             if (loc > triggerHeight + 20) {
-                hdr.classList.add('offset');
+                hdr.classList.add('offset')
             } else {
-                hdr.classList.remove('offset');
+                hdr.classList.remove('offset')
             }
 
             if (loc > triggerHeight + 150) {
-                hdr.classList.add('scrolling');
+                hdr.classList.add('scrolling')
             } else {
-                hdr.classList.remove('scrolling');
+                hdr.classList.remove('scrolling')
             }
-        });
+        })
     }
 
     initializeMobileHeader = () => {
-        const toggleButton = document.querySelector('.s-header__menu-toggle');
-        const headerNavWrap = document.querySelector('.s-header__nav-wrap');
-        const siteBody = document.querySelector("body");
+        const toggleButton = document.querySelector('.s-header__menu-toggle')
+        const headerNavWrap = document.querySelector('.s-header__nav-wrap')
+        const siteBody = document.querySelector("body")
 
-        if (!(toggleButton && headerNavWrap)) return;
+        if (!(toggleButton && headerNavWrap)) return
 
         toggleButton.addEventListener('click', function(event){
-            event.preventDefault();
-            toggleButton.classList.toggle('is-clicked');
-            siteBody.classList.toggle('menu-is-open');
-        });
+            event.preventDefault()
+            toggleButton.classList.toggle('is-clicked')
+            siteBody.classList.toggle('menu-is-open')
+        })
 
         headerNavWrap.querySelectorAll('.s-header__nav a').forEach(function(link) {
             link.addEventListener("click", function(evt) {
 
                 // at 800px and below
                 if (window.matchMedia('(max-width: 800px)').matches) {
-                    toggleButton.classList.toggle('is-clicked');
-                    siteBody.classList.toggle('menu-is-open');
+                    toggleButton.classList.toggle('is-clicked')
+                    siteBody.classList.toggle('menu-is-open')
                 }
-            });
-        });
+            })
+        })
 
         window.addEventListener('resize', function() {
 
             // above 800px
             if (window.matchMedia('(min-width: 801px)').matches) {
-                if (siteBody.classList.contains('menu-is-open')) siteBody.classList.remove('menu-is-open');
-                if (toggleButton.classList.contains("is-clicked")) toggleButton.classList.remove("is-clicked");
+                if (siteBody.classList.contains('menu-is-open')) siteBody.classList.remove('menu-is-open')
+                if (toggleButton.classList.contains("is-clicked")) toggleButton.classList.remove("is-clicked")
             }
-        });
+        })
     }
 
     setScrollSpy = () => {
-        const sections = document.querySelectorAll(".target-section");
+        const sections = document.querySelectorAll(".target-section")
 
         // Add an event listener listening for scroll
-        window.addEventListener("scroll", navHighlight);
+        window.addEventListener("scroll", navHighlight)
 
         function navHighlight() {
         
             // Get current scroll position
-            let scrollY = window.pageYOffset;
+            let scrollY = window.pageYOffset
         
             // Loop through sections to get height(including padding and border), 
             // top and ID values for each
             sections.forEach(function(current) {
-                const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 50;
-                const sectionId = current.getAttribute("id");
+                const sectionHeight = current.offsetHeight
+                const sectionTop = current.offsetTop - 50
+                const sectionId = current.getAttribute("id")
             
                /* If our current scroll position enters the space where current section 
                 * on screen is, add .current class to parent element(li) of the thecorresponding 
@@ -100,11 +100,11 @@ export default class Header extends Component {
                 * an selector
                 */
                 if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    document.querySelector(".s-header__nav a[href*=" + sectionId + "]").parentNode.classList.add("current");
+                    document.querySelector(".s-header__nav a[href*=" + sectionId + "]").parentNode.classList.add("current")
                 } else {
-                    document.querySelector(".s-header__nav a[href*=" + sectionId + "]").parentNode.classList.remove("current");
+                    document.querySelector(".s-header__nav a[href*=" + sectionId + "]").parentNode.classList.remove("current")
                 }
-            });
+            })
         }
     }
 
