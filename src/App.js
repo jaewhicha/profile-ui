@@ -9,6 +9,7 @@ import { CallToAction } from  './components/cta/CallToAction'
 import { Testimonials } from  './components/testimonials/Testimonials'
 import { Contact } from  './components/contact/Contact'
 import { Footer } from  './components/footer/Footer'
+import { ContactModal } from './components/modals/contact/ContactModal'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       <Testimonials />
       <Contact />
       <Footer />
+      <ContactModal />
     </>
   )
 }

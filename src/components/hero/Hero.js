@@ -21,8 +21,7 @@ import './Hero.scss'
                         <h1>I'm Jay Witcher.</h1>
                         <h3>
                         I'm a USA based <span>full-stack engineer</span>, <span>innovator</span>, and <span>leader</span> creating awesome and
-                        effective product experiences for the world to use. <br />Let's <a className="smoothscroll" href="#about">start scrolling</a> 
-                        &nbspand learn more <a className="smoothscroll" href="#about">about me</a>.
+                        effective product experiences for the world to use. <br />Let's <a className="smoothscroll" href="#about">start scrolling</a> and learn more <a className="smoothscroll" href="#about">about me</a>.
                         </h3>
                         <div className="s-hero__content-social">
                             <a title="LinkedIn" href="https://www.linkedin.com/in/jay-witcher/">
