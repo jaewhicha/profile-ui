@@ -10,8 +10,17 @@ export function ContactModal() {
 
     return (
         <ReactModal isOpen={isOpen}>
-            <h3>This is a modal!</h3>
-            <button onClick={() => dispatch(toggleModal())}>Close me</button>
+            <div className="modal-content">
+                <div className="modal-">
+                    <h3>This is a modal!</h3>
+                </div>
+                <div>
+                    <button onClick={() => dispatch(toggleModal())}>Close</button>
+                </div>
+            </div>
+            
+            
+            
         </ReactModal>
     )
 }
