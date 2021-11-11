@@ -104,15 +104,16 @@ export function Footer() {
                             </a>
                         </li>
                         <li>
-                            <a className="icon-anchor" title="DEV" href="https://dev.to/jaewhicha">
-                                <span className="sr-only">My DEV</span>
-                                <i className="fab fa-dev" aria-hidden="true"></i>
+                        <a className="icon-anchor" title="Gitlab" href="https://gitlab.com/jaewhicha">
+                                <span className="sr-only">My Gitlab</span>
+                                <i className="fab fa-gitlab" aria-hidden="true"></i>
                             </a>
+                            
                         </li>
                         <li>
-                            <a className="icon-anchor" title="Medium" href="https://medium.com/@jaewhicha">
-                                <span className="sr-only">My Medium</span>
-                                <i className="fab fa-medium" aria-hidden="true"></i>
+                        <a className="icon-anchor" title="GitHub" href="https://github.com/jaewhicha">
+                                <span className="sr-only">My GitHub</span>
+                                <i className="fab fa-github" aria-hidden="true"></i>
                             </a>
                         </li>
                     </ul>

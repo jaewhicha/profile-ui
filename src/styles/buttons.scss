@@ -100,7 +100,8 @@
      color: var(--color-btn-stroke-text);
  }
  
- .btn--stroke:hover, button.btn--stroke:hover {
+ .btn--stroke:hover, button.btn--stroke:hover,
+ .btn--stroke:focus, button.btn--stroke:focus {
      background: var(--color-btn-stroke-hover) !important;
      border: 0.2rem solid var(--color-btn-stroke-hover);
      color: var(--color-btn-stroke-hover-text);

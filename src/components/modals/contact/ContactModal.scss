@@ -1,0 +1,90 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 105;
+
+    .modal-container {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        right: auto;
+        bottom: auto;
+        border: 1px solid #ccc;
+        background: #fff;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        border-radius: 4px;
+        outline: none;
+        padding: var(--vspace-1);
+        min-width: 1200px;
+        max-width: 1600px;
+        transform: translate(-50%,-50%);
+
+        @media  screen and (max-width: 1200px) {
+            top: 0;
+            left: 0;
+            transform: none;
+            height: 100%;
+            max-height: unset;
+            min-width: unset;
+        }
+
+        .modal-content {
+            .modal-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: var(--vspace-1);
+
+                .modal-title {
+                    font-size: var(--text-xl);
+                    line-height: var(--vspace-1_25);
+                    font-weight: 600;
+                }
+
+                .close-button {
+                    height: 6.4rem;
+                    width: 6.4rem;
+                    padding: 0;
+                    margin: 0;
+                    border-radius: 50%;
+                    letter-spacing: 0;
+                }
+            }
+
+            .modal-body {
+                display: flex;
+                flex-direction: row;
+
+                @media screen and (max-width: 1200px) {
+                    flex-direction: column;
+                }
+
+                .modal-left {
+                    flex: 0 0 50%;
+                    padding-right: var(--vspace-1);
+
+                    @media screen and (max-width: 1200px) {
+                        padding: 0;
+                    }
+                }
+
+                .modal-right {
+                    flex: 0 0 50%;
+
+                    form {
+                        label {
+                            input, textarea { 
+                                width: 100%
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

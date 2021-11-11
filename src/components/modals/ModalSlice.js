@@ -7,13 +7,13 @@ export const modalSlice = createSlice({
     },
     reducers: {
         openModal: (state) => {
-            state.modalProps.open = true
+            state.open = true
         },
         closeModal: (state) => {
-            state.modalProps.open = false
+            state.open = false
         },
         toggleModal: (state) => {
-            state.modalProps.open = !state.modalProps.open
+            state.open = !state.open
         }
     }
 })

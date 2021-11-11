@@ -1,14 +1,17 @@
-/* eslint-disable react/style-prop-object */
 import React from 'react'
-import MeImage from '../../assets/images/avatars/me-01.jpg'
+import { useDispatch } from 'react-redux'
+import { toggleModal } from '../modals/ModalSlice'
+import MeImage from '../../assets/images/avatars/me-01.png'
 import './About.scss'
 
 export function About() {
+    const dispatch = useDispatch()
+
     return (
         <section id="about" className="s-about target-section">
             <div className="row">
                 <div className="column large-3 tab-12">
-                    <img className="s-about__pic" src={MeImage} alt="" />
+                    <img className="s-about__pic" src={MeImage} alt="Jay Witcher" />
                 </div>
                 <div className="column large-9 tab-12 s-about__content">
                     <h3>About Me</h3>
@@ -18,14 +21,14 @@ export function About() {
                         with both large <em>Fortune</em> Global 500 companies and companies with under 300 employees.  But size doesn't matter, what matters are
                         the problems to be solved and how technology can be leveraged to create solutions.  I have the knowledge and innovator spirit to break down
                         problems into beutifully designed and elegant solutions.<br /><br />
-                        <em>Industry Experience: Energy, Automotive, Healthcare, Financial</em> 
+                        <em>Industry Experience: Energy, Automotive, Healthcare, F&amp;I</em> 
                     </p>
                     <hr />
                     <div className="row s-about__content-bottom">
                         <div className="column w-1000-stack">
-                        <a href="#0" className="btn btn--primary">
+                            <button onClick={() => dispatch(toggleModal())} className="btn btn--primary">
                                 Contact Me
-                            </a>
+                            </button>
                         </div>
                         <div className="column w-1000-stack">
                             <a href="#0" className="btn btn--download">

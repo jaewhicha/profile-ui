@@ -88,28 +88,32 @@ export function Resume() {
                         </p>
                         <ul className="skill-bars-fat">
                             <li>
-                            <div className="progress percent85"></div>
-                            <strong>HTML</strong>
+                                <div className="progress percent95"></div>
+                                <strong>Angular</strong>
                             </li>
                             <li>
-                            <div className="progress percent85"></div>
-                            <strong>CSS</strong>
+                                <div className="progress percent75"></div>
+                                <strong>React</strong>
                             </li>
                             <li>
-                            <div className="progress percent65"></div>
-                            <strong>Javascript</strong>
+                                <div className="progress percent90"></div>
+                                <strong>Express</strong>
                             </li>
                             <li>
-                            <div className="progress percent90"></div>
-                            <strong>Figma</strong>
+                                <div className="progress percent95"></div>
+                                <strong>Javascript</strong>
                             </li>
                             <li>
-                            <div className="progress percent75"></div>
-                            <strong>Illustrator</strong>
+                                <div className="progress percent80"></div>
+                                <strong>Node</strong>
                             </li>
                             <li>
-                            <div className="progress percent60"></div>
-                            <strong>Photoshop</strong>
+                                <div className="progress percent75"></div>
+                                <strong>HTML5</strong>
+                            </li>
+                            <li>
+                                <div className="progress percent70"></div>
+                                <strong>CSS3</strong>
                             </li>
                         </ul>
                     </div>
