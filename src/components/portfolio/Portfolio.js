@@ -2,18 +2,14 @@ import React, { useEffect } from 'react'
 import * as basicLightbox from 'basiclightbox'
 import './Portfolio.scss'
 
-import droplet from '../../assets/images/portfolio/droplet.jpg'
-import droplet2x from '../../assets/images/portfolio/droplet@2x.jpg'
-import dropletBig from '../../assets/images/portfolio/gallery/g-droplet.jpg'
-import lamp from '../../assets/images/portfolio/lamp.jpg'
-import lamp2x from '../../assets/images/portfolio/lamp@2x.jpg'
-import lampBig from '../../assets/images/portfolio/gallery/g-lamp.jpg'
-import minimalismo from '../../assets/images/portfolio/minimalismo.jpg'
-import minimalismo2x from '../../assets/images/portfolio/minimalismo@2x.jpg'
-import minimalismoBig from '../../assets/images/portfolio/gallery/g-minimalismo.jpg'
-import shutterbug from '../../assets/images/portfolio/shutterbug.jpg'
-import shutterbug2x from '../../assets/images/portfolio/shutterbug@2x.jpg'
-import shutterbugBig from '../../assets/images/portfolio/gallery/g-shutterbug.jpg'
+import jwdotcom from '../../assets/images/portfolio/jay-witcher-profile-1x.png'
+import jwdotcom2x from '../../assets/images/portfolio/jay-witcher-profile-2x.png'
+import jwdotcomBig from '../../assets/images/portfolio/gallery/jay-witcher-profile-big.png'
+import fuzzyFormulas from '../../assets/images/portfolio/fuzzy-formulas-1x.png'
+import fuzzyFormulas2x from '../../assets/images/portfolio/fuzzy-formulas-1x.png'
+import fuzzyFormulasBig from '../../assets/images/portfolio/gallery/fuzzy-formulas-big.png'
+
+
 
 export function Portfolio() {
     
@@ -56,90 +52,49 @@ export function Portfolio() {
         <section id="portfolio" className="s-portfolio target-section">
             <div className="row s-portfolio__header">
                 <div className="column large-12">
-                    <h3>A Few Of My Latest Creations</h3>
+                    <h3>My Latest Creations</h3>
                 </div>
             </div>
             <div className="row collapse block-large-1-4 block-medium-1-3 block-tab-1-2 block-500-stack folio-list">
                 <div className="column folio-item">
                     <a href="#modal-01" className="folio-item__thumb">
-                        <img src={droplet} srcSet={`${droplet} 1x, ${droplet2x} 2x`} alt="" />
+                        <img src={jwdotcom} srcSet={`${jwdotcom} 1x, ${jwdotcom2x} 2x`} alt="" />
                     </a>
                 </div>
                 <div className="column folio-item">
                     <a href="#modal-02" className="folio-item__thumb">
-                        <img src={lamp} srcSet={`${lamp} 1x, ${lamp2x} 2x`} alt="" />
-                    </a>
-                </div>
-                <div className="column folio-item">
-                    <a href="#modal-03" className="folio-item__thumb">
-                        <img src={minimalismo} srcSet={`${minimalismo} 1x, ${minimalismo2x} 2x`} alt="" />
-                    </a>
-                </div>
-                <div className="column folio-item">
-                    <a href="#modal-04" className="folio-item__thumb">
-                    <img src={shutterbug} srcSet={`${shutterbug} 1x, ${shutterbug2x} 2x`} alt="" />
+                        <img src={fuzzyFormulas} srcSet={`${fuzzyFormulas} 1x, ${fuzzyFormulas2x} 2x`} alt="" />
                     </a>
                 </div>
             </div>
             <div id="modal-01" hidden>
                 <div className="modal-popup">
-                    <img src={dropletBig} alt="" />
-        
+                    <img src={jwdotcomBig} alt="Profile Site Pictuer" />
                     <div className="modal-popup__desc">
-                        <h5>Droplet</h5>
-                        <p>Odio soluta enim quos sit asperiores rerum rerum repudiandae cum. Vel voluptatem alias qui assumenda iure et expedita voluptatem. Ratione officiis quae.</p>
+                        <h5>This Website</h5>
+                        <p>Built using React and Redux and integrated with microservices while running in a container on Google Cloud Platform - Cloud Run</p>
                         <ul className="modal-popup__cat">
-                            <li>Branding</li>
-                            <li>Product Design</li>
+                            <li>Frontend</li>
+                            <li>Integration</li>
+                            <li>Ajax</li>
                         </ul>
                     </div>
-        
-                    <a href="https://www.behance.net/" className="modal-popup__details">Project link</a>
+                    <a href="https://gitlab.com/jaewhicha-profile" rel="noreferrer" target="_blank" className="modal-popup__details">Project link</a>
                 </div>
             </div>
             <div id="modal-02" hidden>
                 <div className="modal-popup">
-                    <img src={lampBig} alt="" />
-        
+                    <img src={fuzzyFormulasBig} alt="Fuzzy Formulas on Github" />
                     <div className="modal-popup__desc">
-                        <h5>The Lamp</h5>
-                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                        <h5>Fuzzy Formulas Package</h5>
+                        <p>Public NPM package for commonly forgotten formulas</p>
                         <ul className="modal-popup__cat">
-                            <li>Branding</li>
+                            <li>Package</li>
+                            <li>Dependency</li>
+                            <li>Publishing</li>
                         </ul>
                     </div>
-        
-                    <a href="https://www.behance.net/" className="modal-popup__details">Project link</a>
-                </div>
-            </div>
-            <div id="modal-03" hidden>
-                <div className="modal-popup">
-                    <img src={minimalismoBig} alt="" />
-        
-                    <div className="modal-popup__desc">
-                        <h5>Minimalismo</h5>
-                        <p>Exercitationem reprehenderit quod explicabo consequatur aliquid ut magni ut. Deleniti quo corrupti illum velit eveniet ratione necessitatibus ipsam mollitia.</p>
-                        <ul className="modal-popup__cat">
-                            <li>Product Design</li>
-                        </ul>
-                    </div>
-        
-                    <a href="https://www.behance.net/" className="modal-popup__details">Project link</a>
-                </div>
-            </div>
-            <div id="modal-04" hidden>
-                <div className="modal-popup">
-                    <img src={shutterbugBig} alt="" />
-        
-                    <div className="modal-popup__desc">
-                        <h5>Shutterbug</h5>
-                        <p>Dolores velit qui quos nobis. Aliquam delectus voluptas quos possimus non voluptatem voluptas voluptas. Est doloribus eligendi porro doloribus voluptatum.</p>
-                        <ul className="modal-popup__cat">
-                            <li>E-Commerce</li>
-                        </ul>
-                    </div>
-        
-                    <a href="https://www.behance.net/" className="modal-popup__details">Project link</a>
+                    <a href="https://github.com/jaewhicha/fuzzy-formulas" rel="noreferrer" target="_blank" className="modal-popup__details">Project link</a>
                 </div>
             </div>
         </section>

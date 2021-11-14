@@ -19,7 +19,9 @@ export function ContactModal() {
             <div className="modal-content">
                 <div className="modal-header">
                     <div className="modal-title">Contact Me</div>
-                    <button className="close-button btn--stroke" onClick={() => dispatch(toggleModal())}>X</button>
+                    <button className="close-button btn--stroke" onClick={() => dispatch(toggleModal())}>
+                        X
+                    </button>
                 </div>
                 <div className="modal-body">
                     <div className="modal-left">

@@ -16,24 +16,26 @@ install:
       - node_modules/
 
 build:
-  image:
-    name: gcr.io/kaniko-project/executor:debug
-    entrypoint: [""]
+  image: google/cloud-sdk:alpine
+  services:
+    - docker:19.03-dind
   variables:
-    DOCKER_IMAGE: $GCP_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG:$CI_COMMIT_SHORT_SHA
+    DOCKER_IMAGE: $IMAGE_NAME-$CI_COMMIT_SHORT_SHA
+  before_script:
+    - base64 -d $GCP_SA_KEY | docker login -u _json_key --password-stdin https://gcr.io
+    - base64 -d $GCP_SA_KEY | gcloud auth activate-service-account --key-file _json_key
+    - gcloud config set project $GCP_PROJECT
+    - gcloud auth configure-docker --quiet
   script:
-    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
-    - /kaniko/executor
-        --context $CI_PROJECT_DIR
-        --dockerfile $CI_PROJECT_DIR/Dockerfile
-        --cache=true
-        --cache-repo=$GCP_REGISTRY_IMAGE/cache
-        --destination $DOCKER_IMAGE
+    - echo "IMAGE_APP_TAG=$IMAGE_NAME" >> .env
+    - docker-compose build
+    - docker tag $IMAGE_NAME" $GCP_DOCKER_REGION/$GCP_PROJECT/$GCP_DOCKER_REPO/$DOCKER_IMAGE
+    - docker push $GCP_DOCKER_REGION/$GCP_PROJECT/$GCP_DOCKER_REPO/$DOCKER_IMAGE
   stage: build
 
 lint:
   stage: test
-  image: node:14
+  image: node:15
   before_script:
     - yarn install
   needs: ["install"]
@@ -49,7 +51,7 @@ lint:
 
 test:
   stage: test
-  image: node:14
+  image: node:15
   before_script:
     - yarn install
   needs: ["install"]
