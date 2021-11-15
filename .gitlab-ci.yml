@@ -70,7 +70,6 @@ build:
     - docker push $GCP_DOCKER_REGION/$GCP_PROJECT/$GCP_DOCKER_REPO/$DOCKER_IMAGE
   stage: build
   dependencies:
-    - lint
     - test
 
 deploy:staging:
