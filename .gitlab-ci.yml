@@ -63,7 +63,7 @@ build:
     - gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
     - gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://gcr.io
     - gcloud config set project $GCP_PROJECT
-    - gcloud auth configure-docker --quiet
+    - gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
   script:
     - sleep 10
     - docker build -t $DOCKER_IMAGE .
@@ -84,7 +84,7 @@ deploy:staging:
     - gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
     - gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://gcr.io
     - gcloud config set project $GCP_PROJECT
-    - gcloud auth configure-docker --quiet
+    - gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
   script:
     - gcloud run deploy $GCP_SERVICE --image $DOCKER_IMAGE --platform managed --region $GCP_REGION
     - echo "ENVIRONMENT_URL=$(gcloud run services list --platform managed --region $GCP_REGION | grep $GCP_SERVICE | awk '{print $4}')" >> deploy.env
