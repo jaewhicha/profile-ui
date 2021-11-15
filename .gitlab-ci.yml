@@ -59,7 +59,7 @@ build:
   variables:
     DOCKER_IMAGE: $IMAGE_NAME-$CI_COMMIT_SHORT_SHA
   before_script:
-    - base64 -d ~/gcloud/gitlab-key-base64 > ${HOME}/gcloud-service-key.json    
+    - base64 -d $GCP_SA_KEY > ${HOME}/gcloud-service-key.json    
     - gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
     - gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://gcr.io
     - gcloud config set project $GCP_PROJECT
@@ -79,7 +79,7 @@ deploy:staging:
   services:
     - docker:19.03-dind
   before_script:
-    - base64 -d ~/gcloud/gitlab-key-base64 > ${HOME}/gcloud-service-key.json    
+    - base64 -d $GCP_SA_KEY > ${HOME}/gcloud-service-key.json    
     - gcloud auth activate-service-account --key-file=${HOME}/gcloud-service-key.json
     - gcloud auth print-access-token | docker login -u oauth2accesstoken --password-stdin https://gcr.io
     - gcloud config set project $GCP_PROJECT
