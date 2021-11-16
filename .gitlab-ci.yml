@@ -92,8 +92,8 @@ deploy:staging:
     - gcloud config set project $GCP_PROJECT
     - gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
   script:
-    - gcloud run deploy $GCP_SERVICE --image $DOCKER_IMAGE --platform managed --region $GCP_REGION
-    - echo "ENVIRONMENT_URL=$(gcloud run services list --platform managed --region $GCP_REGION | grep $GCP_SERVICE | awk '{print $4}')" >> deploy.env
+    - gcloud run deploy $GCP_SERVICE_NAME --image $DOCKER_IMAGE --platform managed --region $GCP_REGION
+    - echo "ENVIRONMENT_URL=$(gcloud run services list --platform managed --region $GCP_REGION | grep $GCP_SERVICE_NAME | awk '{print $4}')" >> deploy.env
   environment:
     name: staging
     url: $ENVIRONMENT_URL_STAGE
@@ -105,8 +105,10 @@ deploy:staging:
   variables:
     DOCKER_IMAGE: $IMAGE_NAME-$CI_COMMIT_SHORT_SHA
     GCP_SERVICE_NAME: $GCP_SERVICE-stage
-  only:
-    - master
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: always
+    - when: never
 
 deploy:production:
   extends: deploy:staging
@@ -115,4 +117,7 @@ deploy:production:
     url: $ENVIRONMENT_URL_PROD
   variables:
     GCP_SERVICE_NAME: $GCP_SERVICE-prod
-  when: manual
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: manual
+    - when: never
