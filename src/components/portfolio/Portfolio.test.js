@@ -1,13 +1,16 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
+import configureStore from 'redux-mock-store'
+import { Provider } from 'react-redux'
 
-import Portfolio from './Portfolio'
+import { Portfolio } from './Portfolio'
 
 describe('<Portfolio />', () => {
-    const defaultProps = {}
-    const wrapper = render(<Portfolio {...defaultProps} />)
+    const mockStore = configureStore()
+    const store = mockStore({})
+    const wrapper = render(<Provider store={store}><Portfolio></Portfolio></Provider>)
 
     test('render', () => {
-        expect(wrapper).toMatchSnapshot()
+        expect(wrapper).toBeDefined()
     })
 })
