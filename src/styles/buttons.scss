@@ -1,0 +1,116 @@
+/* ===================================================================
+ * # buttons 
+ *
+ * ------------------------------------------------------------------- */
+ .btn, 
+ button, 
+ input[type="submit"], 
+ input[type="reset"], 
+ input[type="button"] {
+     --btn-height: var(--vspace-btn);
+     display: inline-block;
+     font-family: var(--font-1);
+     font-weight: 600;
+     font-size: var(--text-xs);
+     text-transform: uppercase;
+     letter-spacing: .35em;
+     height: var(--btn-height);
+     line-height: calc(var(--btn-height) - .4rem);
+     padding: 0 3.6rem;
+     margin: 0 .4rem 1.6rem 0;
+     color: var(--color-btn-text);
+     text-decoration: none;
+     text-align: center;
+     white-space: nowrap;
+     cursor: pointer;
+     -webkit-transition: all .3s;
+     transition: all .3s;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     border-radius: var(--border-radius);
+     background-color: var(--color-btn);
+     border: 0.2rem solid var(--color-btn);
+ }
+ 
+ .btn:hover, 
+ button:hover, 
+ input[type="submit"]:hover, 
+ input[type="reset"]:hover, 
+ input[type="button"]:hover, 
+ .btn:focus, 
+ button:focus, 
+ input[type="submit"]:focus, 
+ input[type="reset"]:focus, 
+ input[type="button"]:focus {
+     background-color: var(--color-btn-hover);
+     border-color: var(--color-btn-hover);
+     color: var(--color-btn-hover-text);
+     outline: 0;
+ }
+ 
+ /* button primary
+  * ------------------------------------------------- */
+ .btn.btn--primary, 
+ button.btn--primary, 
+ input[type="submit"].btn--primary, 
+ input[type="reset"].btn--primary, 
+ input[type="button"].btn--primary {
+     background: var(--color-btn-primary);
+     border-color: var(--color-btn-primary);
+     color: var(--color-btn-primary-text);
+ }
+ 
+ .btn.btn--primary:hover, 
+ button.btn--primary:hover, 
+ input[type="submit"].btn--primary:hover, 
+ input[type="reset"].btn--primary:hover, 
+ input[type="button"].btn--primary:hover, 
+ .btn.btn--primary:focus, 
+ button.btn--primary:focus, 
+ input[type="submit"].btn--primary:focus, 
+ input[type="reset"].btn--primary:focus, 
+ input[type="button"].btn--primary:focus {
+     background: var(--color-btn-primary-hover);
+     border-color: var(--color-btn-primary-hover);
+     color: var(--color-btn-primary-hover-text);
+ }
+ 
+ /* button modifiers
+  * ------------------------------------------------- */
+ .btn.h-full-width, button.h-full-width {
+     width: 100%;
+     margin-right: 0;
+ }
+ 
+ .btn--small, button.btn--small {
+     --btn-height: calc(var(--vspace-btn) - 1.6rem);
+ }
+ 
+ .btn--medium, button.btn--medium {
+     --btn-height: calc(var(--vspace-btn) + .8rem);
+ }
+ 
+ .btn--large, button.btn--large {
+     --btn-height: calc(var(--vspace-btn) + 1.6rem);
+ }
+ 
+ .btn--stroke, button.btn--stroke {
+     background: transparent !important;
+     border: 0.2rem solid var(--color-btn-stroke);
+     color: var(--color-btn-stroke-text);
+ }
+ 
+ .btn--stroke:hover, button.btn--stroke:hover,
+ .btn--stroke:focus, button.btn--stroke:focus {
+     background: var(--color-btn-stroke-hover) !important;
+     border: 0.2rem solid var(--color-btn-stroke-hover);
+     color: var(--color-btn-stroke-hover-text);
+ }
+ 
+ .btn--pill, button.btn--pill {
+     padding-left: 3.2rem !important;
+     padding-right: 3.2rem !important;
+     border-radius: 1000px !important;
+ }
+ 
+ 
