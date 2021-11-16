@@ -80,7 +80,7 @@ build:
     - lint
     - test
 
-deploy:staging:
+deploy:
   image: google/cloud-sdk:alpine
   stage: deploy
   services:
@@ -92,11 +92,11 @@ deploy:staging:
     - gcloud config set project $GCP_PROJECT
     - gcloud auth configure-docker us-central1-docker.pkg.dev --quiet
   script:
-    - gcloud run deploy $GCP_SERVICE_NAME --image $GCP_DOCKER_REGION/$GCP_PROJECT/$GCP_DOCKER_REPO/$DOCKER_IMAGE --platform managed --region $GCP_REGION
+    - gcloud run deploy $GCP_SERVICE_NAME --image $GCP_DOCKER_REGION/$GCP_PROJECT/$GCP_DOCKER_REPO/$DOCKER_IMAGE --platform managed --region $GCP_REGION --allow-unauthenticated --execution-environment gen2
     - echo "ENVIRONMENT_URL=$(gcloud run services list --platform managed --region $GCP_REGION | grep $GCP_SERVICE_NAME | awk '{print $4}')" >> deploy.env
   environment:
-    name: staging
-    url: $ENVIRONMENT_URL_STAGE
+    name: production
+    url: $ENVIRONMENT_URL_PROD
   artifacts:
     reports:
       dotenv: deploy.env
@@ -104,20 +104,20 @@ deploy:staging:
     - build
   variables:
     DOCKER_IMAGE: $IMAGE_NAME-$CI_COMMIT_SHORT_SHA
-    GCP_SERVICE_NAME: $GCP_SERVICE-stage
+    GCP_SERVICE_NAME: $GCP_SERVICE-prod
   rules:
     - if: '$CI_COMMIT_BRANCH == "main"'
       when: always
     - when: never
 
-deploy:production:
-  extends: deploy:staging
-  environment:
-    name: production
-    url: $ENVIRONMENT_URL_PROD
-  variables:
-    GCP_SERVICE_NAME: $GCP_SERVICE-prod
-  rules:
-    - if: '$CI_COMMIT_BRANCH == "main"'
-      when: manual
-    - when: never
+# deploy:production:
+#   extends: deploy:staging
+#   environment:
+#     name: production
+#     url: $ENVIRONMENT_URL_PROD
+#   variables:
+#     GCP_SERVICE_NAME: $GCP_SERVICE-prod
+#   rules:
+#     - if: '$CI_COMMIT_BRANCH == "main"'
+#       when: manual
+#     - when: never
