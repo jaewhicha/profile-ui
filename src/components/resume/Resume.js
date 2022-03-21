@@ -21,7 +21,7 @@ export function Resume() {
                             </p>
                         </div>
                         <p>
-                            I am an architect on the Digital Content Engineering team at lululemon where we work on new and
+                            I am an architect on the Digital Content Engineering team at lululemon where I work on new and
                             and exciting things for shop.lululemon.com.
                         </p>
 
