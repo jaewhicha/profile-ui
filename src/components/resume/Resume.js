@@ -10,13 +10,29 @@ export function Resume() {
                     <h3 className="section-header-allcaps">Career</h3>
                 </div>
                 <div className="column large-9 tab-12">
+                <div className="resume-block">
+                        <div className="resume-block__header">
+                            <h4 className="h3">lululemon athletica</h4>
+                            <p className="resume-block__header-meta">
+                                <span>Senior Architect I</span> 
+                                <span className="resume-block__header-date">
+                                    March 2022 - Present
+                                </span>
+                            </p>
+                        </div>
+                        <p>
+                            I am an architect on the Digital Content Engineering team at lululemon where I work on new and
+                            and exciting things for shop.lululemon.com.
+                        </p>
+
+                    </div>
                     <div className="resume-block">
                         <div className="resume-block__header">
                             <h4 className="h3">Pariveda Solutions</h4>
                             <p className="resume-block__header-meta">
                                 <span>Lead Software Engineer, Senior Associate</span> 
                                 <span className="resume-block__header-date">
-                                    July 2017 - Present
+                                    July 2017 - March 2022
                                 </span>
                             </p>
                         </div>
